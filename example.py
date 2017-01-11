@@ -12,15 +12,15 @@ import time
 
 
 bot = InstaBot(login="username", password="password",
-               like_per_day=1000,
+               like_per_day=300,
                comments_per_day=0,
-               tag_list=['follow4follow', 'f4f', 'cute'],
+               tag_list=['follow4follow', 'f4f', 'cute', 'ragdoll', 'kitten', 'natsu', 'ragdollcats', 'ragdoll_feature'],
                tag_blacklist=['rain', 'thunderstorm'],
                user_blacklist={},
-               max_like_for_one_tag=50,
+               max_like_for_one_tag=10,
                follow_per_day=300,
-               follow_time=1*60,
-               unfollow_per_day=300,
+               follow_time=24*60*60,
+               unfollow_per_day=30,
                unfollow_break_min=15,
                unfollow_break_max=30,
                log_mod=0,
@@ -37,7 +37,7 @@ while True:
 
     #print("# MODE 0 = ORIGINAL MODE BY LEVPASHA")
     #print("## MODE 1 = MODIFIED MODE BY KEMONG")
-    #print("### MODE 2 = ORIGINAL MODE + UNFOLLOW WHO DON'T FOLLOW BACK")
+    print("### MODE 2 = ORIGINAL MODE + UNFOLLOW WHO DON'T FOLLOW BACK")
     #print("#### MODE 3 = MODIFIED MODE : UNFOLLOW PEOPLE WHO DON'T FOLLOW BACK BASED ON RECENT FEED ONLY")
     #print("##### MODE 4 = MODIFIED MODE : FOLLOW PEOPLE BASED ON RECENT FEED ONLY")
     #print("###### MODE 5 = MODIFIED MODE : JUST UNFOLLOW EVERYBODY, EITHER YOUR FOLLOWER OR NOT")
@@ -49,7 +49,7 @@ while True:
     # DON'T USE MODE 5 FOR A LONG PERIOD. YOU RISK YOUR ACCOUNT FROM GETTING BANNED
     ## USE MODE 5 IN BURST MODE, USE IT TO UNFOLLOW PEOPLE AS MANY AS YOU WANT IN SHORT TIME PERIOD
 
-    mode = 0
+    mode = 2
 
     #print("You choose mode : %i" %(mode))
     #print("CTRL + C to cancel this operation or wait 30 seconds to start")
